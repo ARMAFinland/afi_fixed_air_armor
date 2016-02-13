@@ -55,11 +55,12 @@ class CfgVehicles {
 	class Heli_Transport_01_base_F: Helicopter_Base_H {
 		armor = 25;
 		armorStructural = 50;
-		epeImpulseDamageCoef = 20;
+		epeImpulseDamageCoef = 10;
 		crewCrashProtection = 0.1;
 		class HitPoints: HitPoints {
 			class HitHull: HitHull {
 				armor = 999;
+				minimalHit = 25;
 			};
 			class HitEngine: HitEngine2 {
 				armor = 2;
