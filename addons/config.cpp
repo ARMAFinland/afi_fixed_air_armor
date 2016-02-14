@@ -11,6 +11,7 @@ class CfgVehicles {
 	class Plane_CAS_01_base_F;
 	class RHS_A10: Plane_CAS_01_base_F {
 		armor = 25;
+		crewCrashProtection = 0.01;
 		class HitPoints {
 			class HitHull {
 				armor = 50;
@@ -28,6 +29,7 @@ class CfgVehicles {
 	class O_Plane_CAS_02_F;
 	class RHS_su25_base: O_Plane_CAS_02_F {
 		armor = 25;
+		crewCrashProtection = 0.01;
 		class HitPoints {
 			class HitHull {
 				armor = 50;
@@ -53,15 +55,7 @@ class CfgVehicles {
 		};
 	};
 	class Heli_Transport_01_base_F: Helicopter_Base_H {
-		armor = 25;
-		armorStructural = 50;
-		epeImpulseDamageCoef = 10;
-		crewCrashProtection = 0.1;
 		class HitPoints: HitPoints {
-			class HitHull: HitHull {
-				armor = 999;
-				minimalHit = 25;
-			};
 			class HitEngine: HitEngine2 {
 				armor = 2;
 				name = "engine_hit";
@@ -70,8 +64,24 @@ class CfgVehicles {
 			};
 		};
 	};
+	class RHS_UH60_Base: Heli_Transport_01_base_F {
+		armor = 25;
+		armorStructural = 3;
+		epeImpulseDamageCoef = 20;
+		crewCrashProtection = 0.1;
+		class HitPoints: HitPoints {
+			class HitHull: HitHull {
+				armor = 999;
+				explosionShielding = 0.1;
+				minimalHit = 100;
+				depends = "";
+				radius = 0.01;
+			};
+		};
+	};
 	class MELB_base: Helicopter_Base_H {
 		armor = 15;
+		armorStructural = 3;
 		class HitPoints: HitPoints {
 			class HitHull: HitHull {
 			armor = 999;
