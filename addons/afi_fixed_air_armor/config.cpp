@@ -10,7 +10,7 @@ class CfgPatches {
 class CfgVehicles {
 	class Plane_CAS_01_base_F;
 	class RHS_A10: Plane_CAS_01_base_F {
-		armor = 25;
+		armor = 15;
 		crewCrashProtection = 0.01;
 		class HitPoints {
 			class HitHull {
@@ -28,7 +28,7 @@ class CfgVehicles {
 	};
 	class O_Plane_CAS_02_F;
 	class RHS_su25_base: O_Plane_CAS_02_F {
-		armor = 25;
+		armor = 15;
 		crewCrashProtection = 0.01;
 		class HitPoints {
 			class HitHull {
@@ -73,8 +73,6 @@ class CfgVehicles {
 			class HitHull: HitHull {
 				armor = 999;
 				explosionShielding = 0.1;
-				minimalHit = 100;
-				depends = "";
 				radius = 0.01;
 			};
 		};
