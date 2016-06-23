@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Air_F_Beta_Heli_Transport_01","RHS_US_A2_AirImport","rhs_c_a2port_air","MELB"};
+		requiredAddons[] = {"A3_Air_F_Beta_Heli_Transport_01","RHS_US_A2_AirImport","rhs_c_a2port_air","rhsusf_c_melb"};
 	};
 };
 
@@ -77,7 +77,7 @@ class CfgVehicles {
 			};
 		};
 	};
-	class MELB_base: Helicopter_Base_H {
+	class RHS_MELB_base: Helicopter_Base_H {
 		armor = 15;
 		armorStructural = 3;
 		class HitPoints: HitPoints {
